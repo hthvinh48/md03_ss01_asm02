@@ -1,6 +1,6 @@
-package service;
+package org.example.productmanagement.service;
 
-import model.Product;
+import org.example.productmanagement.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

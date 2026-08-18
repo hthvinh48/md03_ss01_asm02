@@ -1,4 +1,4 @@
-package model;
+package org.example.productmanagement.model;
 
 public class Product {
     private String id;
