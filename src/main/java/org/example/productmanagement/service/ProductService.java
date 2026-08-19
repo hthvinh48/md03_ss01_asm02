@@ -19,4 +19,29 @@ public class ProductService {
     public List<Product> getAllProducts() {
         return products;
     }
+
+    public boolean addProduct(Product product) {
+        return products.add(product);
+    }
+
+    public boolean updateProduct(Product product, String id) {
+        for (Product p : products) {
+            if (p.getId().equals(id)) {
+                p.setName(product.getName());
+                p.setPrice(product.getPrice());
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteProduct(String id) {
+        for (Product p : products) {
+            if (p.getId().equals(id)) {
+                products.remove(p);
+                return true;
+            }
+        }
+        return false;
+    }
 }
